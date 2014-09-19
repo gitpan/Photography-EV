@@ -1,0 +1,49 @@
+{
+   "abstract" : "Calculate exposure value (EV)",
+   "author" : [
+      "Graham Ollis <plicease@cpan.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.142060",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Photography-EV",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "POSIX" : "0",
+            "base" : "0",
+            "perl" : "5.020000"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.94"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/plicease/Photography-EV/issues"
+      },
+      "homepage" : "http://perl.wdlabs.com/Photography-EV",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/plicease/Photography-EV.git",
+         "web" : "https://github.com/plicease/Photography-EV"
+      }
+   },
+   "version" : "0.01"
+}
+
