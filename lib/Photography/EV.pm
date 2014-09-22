@@ -12,7 +12,7 @@ our @EXPORT_OK = qw( ev aperture shutter_speed );
 our @EXPORT = @EXPORT_OK;
 
 # ABSTRACT: Calculate exposure value (EV)
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 
 
 sub _round :prototype($)
@@ -97,7 +97,7 @@ Photography::EV - Calculate exposure value (EV)
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -155,11 +155,12 @@ of possible shutter speeds), then the returned shutter speed
 will be the closest possible from that list.  This is helpful
 for older cameras that have a different set of shutter speed
 stops, or newer cameras that use half stop shutter speeds.
-At least some Rolleiflex TLRs have shutter speeds of 2, 5, 10,
+At least some Rolleiflex TLRs have shutter speeds of 1, 2, 5, 10,
 25, 50, 100, 250, 500 instead of the modern values.  To get
 the correct shutter speed for f/3.5 and EV 5:
 
- my $time = shutter_speed(5, 3.5, [2, 5, 10, 25, 50, 100, 250, 500]);
+ # map displayed shutter speed to 1/t to get time in seconds
+ my $time = shutter_speed(6, 3.5, [map { 1/$_ } 1, 2, 5, 10, 25, 50, 100, 250, 500]);
 
 =head1 CAVEATS
 
