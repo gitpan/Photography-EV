@@ -1,5 +1,8 @@
 Revision history for Photography-EV
 
+0.04      2014-10-29 11:33:11 -0400
+  - use pure perl pow if POSIX is not available
+
 0.03      2014-10-29 07:52:17 -0400
   - exit instead of die on wrong Perl version at install
     this is an attempt to reduce cpan tester results

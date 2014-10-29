@@ -14,11 +14,10 @@ meta-spec:
   version: '1.4'
 name: Photography-EV
 requires:
-  POSIX: '0'
   base: '0'
   perl: '5.020000'
 resources:
   bugtracker: https://github.com/plicease/Photography-EV/issues
   homepage: http://perl.wdlabs.com/Photography-EV
   repository: git://github.com/plicease/Photography-EV.git
-version: '0.03'
+version: '0.04'

@@ -6,13 +6,30 @@ use 5.020000;
 use feature 'signatures';
 no warnings 'experimental::signatures';
 use base qw( Exporter );
-use POSIX qw( pow );
+BEGIN {
+  eval q{ 
+    use POSIX qw( pow );
+  };
+  if($@)
+  {
+    sub pow ($x, $exponent)
+    {
+      my $value = 1;
+      for(1..$exponent)
+      {
+        $value *= $x;
+      }
+      $value;
+    }
+  }
+}
+  
 
 our @EXPORT_OK = qw( ev aperture shutter_speed );
 our @EXPORT = @EXPORT_OK;
 
 # ABSTRACT: Calculate exposure value (EV)
-our $VERSION = '0.03'; # VERSION
+our $VERSION = '0.04'; # VERSION
 
 
 sub _round :prototype($)
@@ -97,7 +114,7 @@ Photography::EV - Calculate exposure value (EV)
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -165,9 +182,6 @@ the correct shutter speed for f/3.5 and EV 5:
 =head1 CAVEATS
 
 This module requires Perl 5.20 or better.
-
-This modules doesn't use any non-core modules, but it does use L<POSIX>, which
-may not be available everywhere.
 
 =head1 SEE ALSO
 

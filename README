@@ -4,7 +4,7 @@ NAME
 
 VERSION
 
-    version 0.03
+    version 0.04
 
 SYNOPSIS
 
@@ -70,9 +70,6 @@ FUNCTIONS
 CAVEATS
 
     This module requires Perl 5.20 or better.
-
-    This modules doesn't use any non-core modules, but it does use POSIX,
-    which may not be available everywhere.
 
 SEE ALSO
 

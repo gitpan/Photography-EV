@@ -21,7 +21,6 @@
       },
       "runtime" : {
          "requires" : {
-            "POSIX" : "0",
             "base" : "0",
             "perl" : "5.020000"
          }
@@ -44,6 +43,6 @@
          "web" : "https://github.com/plicease/Photography-EV"
       }
    },
-   "version" : "0.03"
+   "version" : "0.04"
 }
 

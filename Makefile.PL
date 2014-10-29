@@ -27,13 +27,12 @@ my %WriteMakefileArgs = (
   "MIN_PERL_VERSION" => "5.020000",
   "NAME" => "Photography::EV",
   "PREREQ_PM" => {
-    "POSIX" => 0,
     "base" => 0
   },
   "TEST_REQUIRES" => {
     "Test::More" => "0.94"
   },
-  "VERSION" => "0.03",
+  "VERSION" => "0.04",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -42,7 +41,6 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
   "ExtUtils::MakeMaker" => 0,
-  "POSIX" => 0,
   "Test::More" => "0.94",
   "base" => 0
 );
