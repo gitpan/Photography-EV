@@ -12,7 +12,7 @@ our @EXPORT_OK = qw( ev aperture shutter_speed );
 our @EXPORT = @EXPORT_OK;
 
 # ABSTRACT: Calculate exposure value (EV)
-our $VERSION = '0.02'; # VERSION
+our $VERSION = '0.03'; # VERSION
 
 
 sub _round :prototype($)
@@ -97,7 +97,7 @@ Photography::EV - Calculate exposure value (EV)
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
