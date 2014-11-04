@@ -12,7 +12,7 @@ BEGIN {
   };
   if($@)
   {
-    sub pow ($x, $exponent)
+    *pow = sub ($x, $exponent)
     {
       my $value = 1;
       for(1..$exponent)
@@ -29,7 +29,7 @@ our @EXPORT_OK = qw( ev aperture shutter_speed );
 our @EXPORT = @EXPORT_OK;
 
 # ABSTRACT: Calculate exposure value (EV)
-our $VERSION = '0.04'; # VERSION
+our $VERSION = '0.05'; # VERSION
 
 
 sub _round :prototype($)
@@ -114,7 +114,7 @@ Photography::EV - Calculate exposure value (EV)
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 

@@ -4,10 +4,12 @@ author:
   - 'Graham Ollis <plicease@cpan.org>'
 build_requires:
   Test::More: '0.94'
+  perl: '5.020000'
 configure_requires:
   ExtUtils::MakeMaker: '0'
+  perl: '5.020000'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.021, CPAN::Meta::Converter version 2.142690'
+generated_by: 'Dist::Zilla version 5.023, CPAN::Meta::Converter version 2.142690'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -20,4 +22,4 @@ resources:
   bugtracker: https://github.com/plicease/Photography-EV/issues
   homepage: http://perl.wdlabs.com/Photography-EV
   repository: git://github.com/plicease/Photography-EV.git
-version: '0.04'
+version: '0.05'
